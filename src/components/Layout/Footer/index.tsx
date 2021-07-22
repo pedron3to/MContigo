@@ -1,4 +1,3 @@
-import Link from 'next/Link';
 import { Logo } from '../../Logo';
 import {
   FaFacebookF,
