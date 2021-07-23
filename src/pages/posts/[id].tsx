@@ -1,3 +1,4 @@
+import { url } from '..';
 import { Biography } from '../../components/Biography';
 import { Categories } from '../../components/Categories';
 import { Content } from '../../components/Content';
@@ -18,4 +19,17 @@ export default function Post() {
       <Biography />
     </>
   );
+}
+
+export async function getServerSideProps({ query }: any) {
+  const { id } = query;
+
+  console.log(id);
+  const res = await fetch(`${url}/${id}`);
+  const data = await res.json();
+
+  console.log(data);
+  return {
+    props: { data },
+  };
 }
