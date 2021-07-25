@@ -1,7 +1,13 @@
-export function Title() {
+import { ReactNode } from 'react';
+
+interface TitleProps {
+  children: ReactNode;
+}
+
+export function Title({ children }: TitleProps) {
   return (
     <>
-      <div>Title</div>
+      <div className='text-black'>{children}</div>
     </>
   );
 }

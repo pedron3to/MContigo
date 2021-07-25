@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Link from 'next/Link';
 import useSWR from 'swr';
 import axios from 'axios';
@@ -9,8 +10,8 @@ import { useState, Suspense } from 'react';
 const fetcher = (url: any) => axios.get(url).then(res => res.data);
 export const url = 'https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts';
 
-export async function getStaticProps() {
-  const posts = await fetcher(`${url}?per_page=9`);
+export async function getServerSideProps({query}:any) {
+  const posts = await fetcher(`${url}?search=${query.name}&per_page=9`);
 
   if (!posts) {
     return {
@@ -23,20 +24,27 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home(props: any) {
-  const [pageIndex, setPageIndex] = useState(0);
-  
+export default function Search(props: any) {
+  const router = useRouter();
 
-  const { data } = useSWR(`${url}?per_page=9&page=${pageIndex}`, fetcher, {
-    initialData: props.posts,
+  console.log(router.query.name);
+  const [pageIndex, setPageIndex] = useState(0);
+  const [orderByRelevance, setOrderByRelevance] = useState(true);
+  const [checked, setChecked] = useState(false);
+
+  const { data } = useSWR(
+    orderByRelevance ?
+    `${url}?search=${router.query.name}&page=${pageIndex}&per_page=9`
+    :`${url}?search=${router.query.name}&page=${pageIndex}&per_page=9&orderby=relevance`
+    , 
+    fetcher,{
+    initialData: props.posts
   });
 
   return (
     <>
-     <form className="search" >
-          <input name="query" type="search" />
-          <button>Search</button>
-        </form>
+     <h1>order by relevance</h1>
+    <input type="checkbox" id="horns" name="horns" onClick={() => {setOrderByRelevance(prev => !prev); setChecked(prev => !prev)}}/>
     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full px-4 max-w-screen-lg mx-auto my-8">
       {data.map(({ id, title, excerpt, featured_media }: any) => (
         <article key={id} className="bg-gray-100 rounded-md h-96 shadow-md">
