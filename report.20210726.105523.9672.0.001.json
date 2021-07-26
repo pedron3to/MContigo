@@ -1,0 +1,480 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210726.105523.9672.0.001.json",
+    "dumpEventTime": "2021-07-26T10:55:23Z",
+    "dumpEventTimeStamp": "1627307723289",
+    "processId": 9672,
+    "threadId": null,
+    "cwd": "C:\\Users\\Projeto01\\OneDrive\\DESENVOLVEDOR\\mcontigosl-challenge",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Projeto01\\OneDrive\\DESENVOLVEDOR\\mcontigosl-challenge\\node_modules\\.bin\\\\..\\next\\dist\\bin\\next",
+      "dev",
+      "-p",
+      "9045"
+    ],
+    "nodejsVersion": "v12.16.2",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.2",
+      "v8": "7.8.279.23-node.34",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1e",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.2/node-v12.16.2-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.2/node-v12.16.2.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.2/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "6.1.7601",
+    "osVersion": "Windows 7 Professional Service Pack 1",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Xeon(R) CPU           W3530  @ 2.80GHz",
+        "speed": 2800,
+        "user": 3213917,
+        "nice": 0,
+        "sys": 963243,
+        "idle": 9053767,
+        "irq": 4212
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU           W3530  @ 2.80GHz",
+        "speed": 2800,
+        "user": 3287299,
+        "nice": 0,
+        "sys": 1126592,
+        "idle": 8816599,
+        "irq": 29530
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU           W3530  @ 2.80GHz",
+        "speed": 2800,
+        "user": 2890121,
+        "nice": 0,
+        "sys": 1201472,
+        "idle": 9138756,
+        "irq": 166921
+      },
+      {
+        "model": "Intel(R) Xeon(R) CPU           W3530  @ 2.80GHz",
+        "speed": 2800,
+        "user": 3132047,
+        "nice": 0,
+        "sys": 1019762,
+        "idle": 9078415,
+        "irq": 8611
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Conexão local",
+        "internal": false,
+        "mac": "84:2b:2b:7a:a8:39",
+        "address": "fe80::1c46:9e35:78c7:9792",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "Conexão local",
+        "internal": false,
+        "mac": "84:2b:2b:7a:a8:39",
+        "address": "192.168.1.38",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "Projeto01-PC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x000000013f992309",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+11577"
+    },
+    {
+      "pc": "0x000000013f996869",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+29337"
+    },
+    {
+      "pc": "0x000000013f9956e8",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24856"
+    },
+    {
+      "pc": "0x000000013fabdd82",
+      "symbol": "v8::base::CPU::has_sse+59378"
+    },
+    {
+      "pc": "0x00000001402da27e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00000001402c2351",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x000000014018e8ac",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x0000000140199ae0",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x0000000140196604",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3204"
+    },
+    {
+      "pc": "0x000000014018be03",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x000000014018a474",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2452"
+    },
+    {
+      "pc": "0x00000001401ab67d",
+      "symbol": "v8::internal::Factory::NewFillerObject+61"
+    },
+    {
+      "pc": "0x000000013ff113d1",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+1665"
+    },
+    {
+      "pc": "0x000000014072730d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+546637"
+    },
+    {
+      "pc": "0x000001018f41ed84",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151264256,
+    "totalCommittedMemory": 2151264256,
+    "usedMemory": 2135165360,
+    "availableMemory": 48562512,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047456,
+        "used": 346360,
+        "available": 701096
+      },
+      "old_space": {
+        "memorySize": 1831739392,
+        "committedMemory": 1831739392,
+        "capacity": 1820867848,
+        "used": 1820604928,
+        "available": 262920
+      },
+      "code_space": {
+        "memorySize": 2789376,
+        "committedMemory": 2789376,
+        "capacity": 2260768,
+        "used": 2260768,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 4984832,
+        "committedMemory": 4984832,
+        "capacity": 3016240,
+        "used": 3016240,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 308195328,
+        "committedMemory": 308195328,
+        "capacity": 307818368,
+        "used": 307818368,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 1196032,
+        "committedMemory": 1196032,
+        "capacity": 1085888,
+        "used": 1085888,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 963.727,
+    "kernelCpuSeconds": 20.67,
+    "cpuConsumptionPercent": 41.3786,
+    "maxRss": 2659442688,
+    "pageFaults": {
+      "IORequired": 6398114,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 14510,
+      "writes": 12694
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\Projeto01\\OneDrive\\DESENVOLVEDOR\\mcontigosl-challenge",
+    "ADSK_3DSMAX_x64_2012": "C:\\Program Files\\Autodesk\\3ds Max 2012\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "ANDROID_HOME": "C:\\Android\\Sdk",
+    "ANSYS140_DIR": "C:\\Program Files\\ANSYS Inc\\v140\\ANSYS",
+    "ANSYSLIC_DIR": "C:\\Program Files\\ANSYS Inc\\Shared Files\\Licensing",
+    "ANSYS_SYSDIR": "winx64",
+    "ANSYS_SYSDIR32": "win32",
+    "APPDATA": "C:\\Users\\Projeto01\\AppData\\Roaming",
+    "asl.log": "Destination=file",
+    "AWP_LOCALE140": "en-us",
+    "AWP_ROOT140": "C:\\Program Files\\ANSYS Inc\\v140",
+    "CADOE_DOCDIR140": "C:\\Program Files\\ANSYS Inc\\v140\\CommonFiles\\help\\en-us\\solviewer",
+    "CADOE_LIBDIR140": "C:\\Program Files\\ANSYS Inc\\v140\\CommonFiles\\Language\\en-us",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132399916899812280",
+    "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_2396_XPCQEBEHVAAMNUPK",
+    "CLASSPATH": ".;",
+    "CM2012DIR": "C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\Materials\\",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "PROJETO01-PC",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "C_EM64T_REDIST11": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FP_NO_HOST_CHECK": "NO",
+    "GIT_ASKPASS": "c:\\Users\\Projeto01\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "HOME": "C:\\Users\\Projeto01",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Projeto01",
+    "ICEMCFD_ROOT140": "C:\\Program Files\\ANSYS Inc\\v140\\icemcfd",
+    "ICEMCFD_SYSDIR": "win64_amd",
+    "ILBDIR": "C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\Materials\\",
+    "ILMDIR": "C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\Materials\\",
+    "INIT_CWD": "C:\\Users\\Projeto01\\OneDrive\\DESENVOLVEDOR\\mcontigosl-challenge",
+    "JAVA_HOME": "C:\\Program Files (x86)\\Java\\jre1.8.0_91",
+    "LANG": "pt_BR.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Projeto01\\AppData\\Local",
+    "LOGONSERVER": "\\\\PROJETO01-PC",
+    "LSTC_LICENSE": "ANSYS",
+    "MOZ_PLUGIN_PATH": "C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\",
+    "MSYSTEM": "MINGW64",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_prefix_usr_local": "",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.4 npm/? node/v12.16.2 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Program Files (x86)\\Yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script": "next dev -p 9045",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies_axios": "^0.21.1",
+    "npm_package_dependencies_isomorphic_unfetch": "^3.1.0",
+    "npm_package_dependencies_next": "11.0.1",
+    "npm_package_dependencies_react": "17.0.2",
+    "npm_package_dependencies_react_dom": "17.0.2",
+    "npm_package_dependencies_react_icons": "^4.2.0",
+    "npm_package_dependencies_swr": "^0.5.6",
+    "npm_package_description": "First, run the development server:",
+    "npm_package_devDependencies_autoprefixer": "^10.3.1",
+    "npm_package_devDependencies_eslint": "^7.31.0",
+    "npm_package_devDependencies_eslint_config_airbnb": "^18.2.1",
+    "npm_package_devDependencies_eslint_config_next": "11.0.1",
+    "npm_package_devDependencies_eslint_config_prettier": "^8.3.0",
+    "npm_package_devDependencies_eslint_plugin_import": "^2.23.4",
+    "npm_package_devDependencies_eslint_plugin_import_helpers": "^1.1.0",
+    "npm_package_devDependencies_eslint_plugin_jsx_a11y": "^6.4.1",
+    "npm_package_devDependencies_eslint_plugin_prettier": "^3.4.0",
+    "npm_package_devDependencies_eslint_plugin_react": "^7.24.0",
+    "npm_package_devDependencies_eslint_plugin_react_hooks": "^4.2.0",
+    "npm_package_devDependencies_postcss": "^8.3.5",
+    "npm_package_devDependencies_prettier": "^2.3.2",
+    "npm_package_devDependencies_tailwindcss": "^2.2.4",
+    "npm_package_devDependencies_typescript": "4.3.5",
+    "npm_package_devDependencies__typescript_eslint_eslint_plugin": "^4.28.4",
+    "npm_package_devDependencies__typescript_eslint_parser": "^4.28.4",
+    "npm_package_devDependencies__types_react": "17.0.14",
+    "npm_package_name": "mcontigosl-challenge",
+    "npm_package_private": "true",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_scripts_build": "next build",
+    "npm_package_scripts_dev": "next dev -p 9045",
+    "npm_package_scripts_lint": "next lint",
+    "npm_package_scripts_start": "next start",
+    "npm_package_version": "0.1.0",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OMP_NUM_THREADS": "4",
+    "OneDrive": "C:\\Users\\Projeto01\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Projeto01\\OneDrive",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Users\\PROJET~1\\AppData\\Local\\Temp\\yarn--1627305343429-0.22734063539613736;C:\\Users\\Projeto01\\OneDrive\\DESENVOLVEDOR\\mcontigosl-challenge\\node_modules\\.bin;C:\\Users\\Projeto01\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Projeto01\\bin;C:\\Python27;C:\\Python27\\Scripts;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files (x86)\\Autodesk\\Backburner;C:\\Program Files\\Common Files\\Autodesk Shared;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\110\\DTS\\Binn;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\Yarn\\bin;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Java\\jdk1.8.0_211\\bin;C:\\Android\\Sdk\\emulator;C:\\Android\\Sdk\\tools;C:\\Android\\Sdk\\tools\\bin;C:\\Android\\Sdk\\platform-tools;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Users\\Projeto01\\.cargo\\bin;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Users\\Projeto01\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Projeto01\\AppData\\Local\\Yarn\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 26 Stepping 5, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "1a05",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;c:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\PowerShell\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "/c/Users/Projeto01/OneDrive/DESENVOLVEDOR/mcontigosl-challenge",
+    "P_SCHEMA": "C:\\Program Files\\ANSYS Inc\\v140\\AISOL\\CADIntegration\\Parasolid\\PSchema",
+    "SESSIONNAME": "Console",
+    "SHLVL": "2",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\Windows",
+    "TEMP": "C:\\Users\\PROJET~1\\AppData\\Local\\Temp",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.58.2",
+    "TMP": "C:\\Users\\PROJET~1\\AppData\\Local\\Temp",
+    "TRACE_ID": "eb72ce6bfa96c8d1",
+    "USERDOMAIN": "Projeto01-PC",
+    "USERNAME": "Projeto01",
+    "USERPROFILE": "C:\\Users\\Projeto01",
+    "VRAY_METASL_PATH_MSL12": "C:\\Program Files\\Chaos Group\\V-Ray\\3dsmax 2012 for x64/metasl/msl12",
+    "VRAY_RT_FOR_3DSMAX2012_MAIN_x64": "C:\\Program Files\\Chaos Group\\V-Ray\\RT for 3ds Max 2012 for x64/bin",
+    "VRAY_RT_FOR_3DSMAX2012_PLUGINS_x64": "C:\\Program Files\\Chaos Group\\V-Ray\\RT for 3ds Max 2012 for x64/bin/plugins",
+    "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\Projeto01\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\Projeto01\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-ce6d1db71c-sock",
+    "WINDIR": "C:\\Windows",
+    "windows_tracing_flags": "3",
+    "windows_tracing_logfile": "C:\\BVTBin\\Tests\\installpackage\\csilogfile.log",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "/usr/bin/winpty"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\system32\\kernel32.dll",
+    "C:\\Windows\\system32\\KERNELBASE.dll",
+    "C:\\Windows\\system32\\dbghelp.dll",
+    "C:\\Windows\\system32\\msvcrt.dll",
+    "C:\\Windows\\system32\\WS2_32.dll",
+    "C:\\Windows\\system32\\RPCRT4.dll",
+    "C:\\Windows\\system32\\NSI.dll",
+    "C:\\Windows\\system32\\IPHLPAPI.DLL",
+    "C:\\Windows\\system32\\WINNSI.DLL",
+    "C:\\Windows\\system32\\PSAPI.DLL",
+    "C:\\Windows\\system32\\USERENV.dll",
+    "C:\\Windows\\system32\\profapi.dll",
+    "C:\\Windows\\system32\\ADVAPI32.dll",
+    "C:\\Windows\\SYSTEM32\\sechost.dll",
+    "C:\\Windows\\system32\\USER32.dll",
+    "C:\\Windows\\system32\\GDI32.dll",
+    "C:\\Windows\\system32\\LPK.dll",
+    "C:\\Windows\\system32\\USP10.dll",
+    "C:\\Windows\\system32\\CRYPT32.dll",
+    "C:\\Windows\\system32\\MSASN1.dll",
+    "C:\\Windows\\system32\\bcrypt.dll",
+    "C:\\Windows\\system32\\WINMM.dll",
+    "C:\\Windows\\system32\\IMM32.DLL",
+    "C:\\Windows\\system32\\MSCTF.dll",
+    "C:\\Windows\\system32\\api-ms-win-core-synch-l1-2-0.DLL",
+    "C:\\Windows\\system32\\powrprof.dll",
+    "C:\\Windows\\system32\\SETUPAPI.dll",
+    "C:\\Windows\\system32\\CFGMGR32.dll",
+    "C:\\Windows\\system32\\OLEAUT32.dll",
+    "C:\\Windows\\system32\\ole32.dll",
+    "C:\\Windows\\system32\\DEVOBJ.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\wshtcpip.dll",
+    "C:\\Windows\\System32\\wship6.dll",
+    "C:\\Windows\\system32\\bcryptprimitives.dll",
+    "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\system32\\dhcpcsvc.DLL",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\system32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Program Files\\Bonjour\\mdnsNSP.dll",
+    "C:\\Windows\\system32\\wshbth.dll",
+    "C:\\Windows\\system32\\cryptbase.dll",
+    "C:\\Windows\\system32\\apphelp.dll",
+    "C:\\Windows\\system32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll"
+  ]
+}

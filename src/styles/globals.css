@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    @apply my-8;
+  }
+  p {
+    @apply text-black leading-8;
+  }
+  h2 {
+    @apply text-title text-3xl font-bold my-8;
+  }
+
+  h3 {
+    @apply text-title text-2xl font-bold my-8;
+  }
+  blockquote {
+    @apply bg-quote text-center py-8 my-8;
+  }
+
+  blockquote p {
+    @apply text-secondary text-pquote italic;
+  }
+
+  a {
+    @apply text-secondary font-bold italic underline;
+  }
+
+  figure > img {
+    @apply w-full bg-secondary my-0 mt-8;
+  }
+
+  figure {
+    @apply w-full bg-secondary my-4;
+  }
+
+  figcaption {
+    @apply w-full bg-figure p-2 text-figurecaption;
+  }
+
+  li {
+    @apply leading-7 py-1 list-inside list-disc;
+  }
+
+  span {
+    @apply leading-7 py-1 font-bold;
+  }
+}

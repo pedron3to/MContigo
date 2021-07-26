@@ -7,7 +7,7 @@ interface PublicationDateProps {
 export function PublicationDate({ children }: PublicationDateProps) {
   return (
     <>
-      <div className='text-black'>{children}</div>
+      <div className="text-black">{children}</div>
     </>
   );
 }

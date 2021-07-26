@@ -7,7 +7,7 @@ interface CategoriesProps {
 export function Categories({ children }: CategoriesProps) {
   return (
     <>
-      <div className='text-black'>{children}</div>
+      <p className='text-secondary font-bold'>{children}</p>
     </>
   );
 }

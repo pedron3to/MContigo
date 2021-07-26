@@ -8,9 +8,7 @@ export type PostProps = {
   content: {
     rendered: string;
   };
-  categories: [
-   { name: string;}
-  ];
+  categories: [{ name: string }];
   excerpt: {
     rendered: string;
   };
@@ -23,4 +21,27 @@ export type PostProps = {
   sticky: boolean;
   type: string;
   link: string;
+  metas: {
+    title: string;
+    description: string;
+    canocical: string;
+    'og:title': string;
+    'og:description': string;
+    'og:image': string;
+    'og:image:alt': string;
+    'og:image:width': number;
+    'og:image:height': number;
+    'og:site_name': number;
+    'twitter:creator': number;
+    'twitter:site': number;
+  };
+  tags: [
+    {
+      id: string;
+      name: string;
+      slug: string;
+      permalink: string;
+      link: string;
+    },
+  ];
 };

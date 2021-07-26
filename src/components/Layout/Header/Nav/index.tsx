@@ -3,11 +3,13 @@ import Link from 'next/Link';
 export function Nav() {
   return (
     <nav>
-      <ul className="flex items-center">
-        <li className="text-text">
-          <Link href="/">Article</Link>
-        </li>
-      </ul>
+      <div className="flex items-center">
+        <Link href="/">
+          <div className="text-title hover:text-primary cursor-pointer font-bold">
+            Article
+          </div>
+        </Link>
+      </div>
     </nav>
   );
 }
