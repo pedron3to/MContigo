@@ -24,7 +24,6 @@ export default function Home({ posts }: any) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageIndex]);
-
   return (
     <>
       <NextSeo title="Mejor Con Salud" />

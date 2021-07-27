@@ -48,7 +48,6 @@ export default function Search({ posts }: any) {
       initialData: posts,
     },
   );
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageIndex]);
@@ -64,7 +63,7 @@ export default function Search({ posts }: any) {
           <div className="w-full flex justify-center items-center max-w-screen-lg mx-auto pt-1 md:p-2">
             <motion.input
               whileTap={{ scale: 0.8 }}
-              className="bg-primary p-4 w-4 h-4 border border-primary mr-2 border-primary border-2 rounded border-opacity-50"
+              className="bg-primary checked:bg-yellow-600 checked:border-transparent p-4 w-4 h-4 border border-primary mr-2 border-primary border-2 rounded border-opacity-50"
               type="checkbox"
               id="horns"
               name="horns"
