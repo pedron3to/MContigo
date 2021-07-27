@@ -2,14 +2,23 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
+import { IoMdClose } from 'react-icons/io';
 
 export function Search() {
   const [input, setInput] = useState('');
+  const [isSeachClicked, SetIsSeachClicked] = useState(false);
 
   const router = useRouter();
 
+  function handleOnClose() {
+    SetIsSeachClicked((prev: boolean) => !prev);
+    setInput('');
+  }
+
   function handleOnSubmitSearch(e: any) {
     e.preventDefault();
+
+    SetIsSeachClicked((prev: boolean) => !prev);
 
     router.push(`/search/${input}`);
   }
@@ -26,7 +35,10 @@ export function Search() {
         required
       />
       <motion.button type="submit" whileTap={{ scale: 0.8 }}>
-        <BiSearchAlt color="#265e6c" size={20} />
+        {!isSeachClicked && <BiSearchAlt color="#265e6c" size={20} />}
+        {isSeachClicked && (
+          <IoMdClose color="#265e6c" size={20} onClick={handleOnClose} />
+        )}
       </motion.button>
     </form>
   );
