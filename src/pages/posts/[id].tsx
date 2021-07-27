@@ -46,7 +46,7 @@ export default function Post({ data }: any) {
       <Categories>{categories[0].name}</Categories>
       <PublicationDate>{dateFormatted}</PublicationDate>
       <Image src={featured_media.large} alt={title} />
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       {tags.map(({ name }: any) => (
         <div>{name}</div>
       ))}
