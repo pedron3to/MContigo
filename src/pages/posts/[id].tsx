@@ -46,9 +46,6 @@ export default function Post({ data }: any) {
       <PublicationDate>{dateFormatted}</PublicationDate>
       <Image src={featured_media.large} alt={title} />
       <div dangerouslySetInnerHTML={{ __html: content }} />
-      {tags.map(({ name }: any) => (
-        <div>{name}</div>
-      ))}
     </div>
   );
 }
