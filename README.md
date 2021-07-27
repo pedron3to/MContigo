@@ -32,4 +32,30 @@ This project was made using the follow technologies:
 $ git clone https://github.com/pedron3to/MContigo.git
 ```
 
+
 ```bash
+$ cd ..
+$ cd MContigo
+# Install Dependencies
+$ yarn
+```
+
+```bash
+$ yarn start
+```
+
+Go to http://localhost:9045 to see the result.
+# :sparkles: Contributing
+
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My new feature'`;
+- Push to your branch: `git push origin my-feature`.
+
+# :page_facing_up: License
+
+This project is under the [MIT license](./LICENSE).
+Made by [Pedro Cassiano](https://www.linkedin.com/in/pedro-cassiano-de-araujo-neto-sartor-70242854/).
+
+Thank you! 🌠
+
