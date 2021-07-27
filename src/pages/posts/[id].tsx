@@ -2,10 +2,8 @@
 import { NextSeo } from 'next-seo';
 
 import { Categories } from '../../components/Categories';
-/* import { Content } from '../../components/Content'; */
 import { Image } from '../../components/Image';
 import { PublicationDate } from '../../components/PublicationDate';
-/* import { Tags } from '../../components/Tags'; */
 import { Title } from '../../components/Title';
 import { PostProps } from '../../lib/wordpressApi/interface';
 
@@ -25,7 +23,7 @@ export default function Post({ data }: any) {
   );
 
   return (
-    <div className="w-full px-4 max-w-screen-lg mx-auto mt-4 md:mt-20">
+    <div className="w-full px-4 max-w-screen-lg mx-auto my-4 md:mt-20">
       <NextSeo
         title={metas.title}
         description={metas.description}
@@ -47,12 +45,11 @@ export default function Post({ data }: any) {
       <Categories>{categories[0].name}</Categories>
       <PublicationDate>{dateFormatted}</PublicationDate>
       <Image src={featured_media.large} alt={title} />
-      <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
+      <div dangerouslySetInnerHTML={{ __html: content }} />
       {tags.map(({ name }: any) => (
         <div>{name}</div>
       ))}
-      {/*  <Tags />
-      <Biography /> */}
+     
     </div>
   );
 }
