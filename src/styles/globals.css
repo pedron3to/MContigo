@@ -17,7 +17,7 @@
     @apply text-title text-2xl font-bold my-8;
   }
   blockquote {
-    @apply bg-quote text-center py-8 my-8;
+    @apply bg-quote text-center py-8 my-8 px-4;
   }
 
   blockquote p {

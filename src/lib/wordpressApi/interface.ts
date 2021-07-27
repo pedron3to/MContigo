@@ -4,14 +4,13 @@ export type PostProps = {
   title: string;
   featured_media: {
     large: string;
+    medium: string;
   };
   content: {
     rendered: string;
   };
   categories: [{ name: string }];
-  excerpt: {
-    rendered: string;
-  };
+  excerpt: string;
   date: string;
   date_gmt: string;
   format: string;

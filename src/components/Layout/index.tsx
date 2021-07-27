@@ -4,6 +4,7 @@ import { Header } from './Header';
 import Main from './Main';
 import { DefaultSeo } from 'next-seo';
 import { Search } from '../Search';
+import { motion } from 'framer-motion';
 
 interface LayoutProps {
   children: ReactNode;
@@ -29,7 +30,23 @@ export function Layout({ children }: LayoutProps) {
       <div className="w-full flex justify-center items-center max-w-screen-lg mx-auto p-4">
         <Search />
       </div>
-      <Main>{children}</Main>
+      <Main>
+      <motion.div initial="hidden" animate="visible" variants={{
+          hidden: {
+            scale: .8,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: .4
+            }
+          },
+        }}>
+        {children}
+        </motion.div>
+        </Main>
       <Footer />
     </>
   );
