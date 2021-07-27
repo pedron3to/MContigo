@@ -13,6 +13,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.png" />
+          <title>Mejor Con Salud</title>
         </Head>
         <body>
           <Main />
