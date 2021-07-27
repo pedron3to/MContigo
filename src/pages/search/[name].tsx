@@ -2,7 +2,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
 import { Button } from '../../components/Button';
@@ -48,6 +48,10 @@ export default function Search({ posts }: any) {
       initialData: posts,
     },
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageIndex]);
 
   return (
     <>

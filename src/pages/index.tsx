@@ -1,6 +1,6 @@
 import axios from 'axios';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 
 import { Button } from '../components/Button';
@@ -16,16 +16,13 @@ export const url = 'https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts';
 export default function Home({ posts }: any) {
   const [pageIndex, setPageIndex] = useState(1);
 
-  const { data, error } = useSWR(
-    `${url}?per_page=9&page=${pageIndex}`,
-    fetcher,
-    {
-      initialData: posts,
-    },
-  );
+  const { data } = useSWR(`${url}?per_page=9&page=${pageIndex}`, fetcher, {
+    initialData: posts,
+  });
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageIndex]);
 
   return (
     <>
