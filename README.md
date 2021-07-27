@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+   :computer: Blog Application using Next and WordPress RestAPI for the MContigo S.L . | <a href="https://mcontigo.com/">MContigo S.L</a>
+</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://mcontigo.vercel.app/">Checkout this blog on your browser</a>
+</p>
 
-First, run the development server:
+
+<div align="center">
+  <sub> Made by
+    <a href="https://github.com/pedron3to">Pedro Cassiano
+  </sub>
+</div>
+
+# 📌 Contents
+
+* [Technologies](#rocket-technologies)
+* [How to Run](#computer-how-to-run)
+* [Contributing](#sparkles-contributing)
+* [License](#page_facing_up-license)
+
+# :rocket: Technologies
+This project was made using the follow technologies:
+
+* [Typescript](https://www.typescriptlang.org/)
+* [Next](https://nextjs.org/)
+* [Framer Motion](https://www.framer.com/motion/)
+* [Tailwind](https://tailwindcss.com/)
+* [SWR](https://swr.vercel.app/)
+  
+
+# :computer: How to run
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone Repository
+$ git clone https://github.com/pedron3to/MContigo.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+$ cd ..
+$ cd MContigo
+# Install Dependencies
+$ yarn
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+```bash
+$ yarn start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Go to http://localhost:9045 to see the result.
+# :sparkles: Contributing
 
-## Learn More
+- Fork this repository;
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My new feature'`;
+- Push to your branch: `git push origin my-feature`.
 
-To learn more about Next.js, take a look at the following resources:
+# :page_facing_up: License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is under the [MIT license](./LICENSE).
+Made by [Pedro Cassiano](https://www.linkedin.com/in/pedro-cassiano-de-araujo-neto-sartor-70242854/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Thank you! 🌠
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
