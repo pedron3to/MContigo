@@ -6,9 +6,7 @@ export type PostProps = {
     large: string;
     medium: string;
   };
-  content: {
-    rendered: string;
-  };
+  content: string;
   categories: [{ name: string }];
   excerpt: string;
   date: string;
