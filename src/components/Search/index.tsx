@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
-import { useRouter } from 'next/router';
-import {motion } from 'framer-motion';
+
 export function Search() {
   const [input, setInput] = useState('');
 
@@ -10,7 +11,7 @@ export function Search() {
   function handleOnSubmitSearch(e: any) {
     e.preventDefault();
 
-    setInput('')
+    setInput('');
     router.push(`/search/${input}`);
   }
   return (
@@ -25,7 +26,7 @@ export function Search() {
         className=" px-2 py-1 w-96 md:w-80"
         required
       />
-      <motion.button type="submit" whileTap={{ scale: 0.8}}>
+      <motion.button type="submit" whileTap={{ scale: 0.8 }}>
         <BiSearchAlt color="#265e6c" size={20} />
       </motion.button>
     </form>

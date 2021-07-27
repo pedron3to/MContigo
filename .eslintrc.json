@@ -3,10 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb"
-  ],
+  "extends": ["plugin:react/recommended", "airbnb"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -29,6 +26,10 @@
       }
     ],
     "class-methods-use-this": "off",
+
+    "object-curly-newline": "off",
+
+    "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": "off",
     "react/require-default-props": "off",
@@ -51,34 +52,19 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/": "off",
     "camelcase": "off",
-    "func-name-matching": [
-      "error",
-      "always"
-    ],
+    "func-name-matching": ["error", "always"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".tsx",
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".tsx", ".js", ".jsx"]
       }
     ],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always",
-        "groups": [
-          "module",
-          "/^@shared/",
-          [
-            "parent",
-            "sibling",
-            "index"
-          ]
-        ],
+        "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
         "alphabetize": {
           "order": "asc",
           "ignoreCase": true
@@ -103,9 +89,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "**/*.spec.js"
-        ]
+        "devDependencies": ["**/*.spec.js"]
       }
     ]
   },

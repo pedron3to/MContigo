@@ -1,4 +1,4 @@
-import { Logo } from '../../Logo';
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {
   FaFacebookF,
   FaPinterest,
@@ -6,6 +6,8 @@ import {
   FaInstagram,
   FaYoutube,
 } from 'react-icons/fa';
+
+import { Logo } from '../../Logo';
 
 export function Footer() {
   return (

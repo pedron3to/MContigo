@@ -7,7 +7,7 @@ interface ContentProps {
 export function Content({ children }: ContentProps) {
   return (
     <>
-      <div className='text-black'>{children}</div>
+      <div className="text-black">{children}</div>
     </>
   );
 }

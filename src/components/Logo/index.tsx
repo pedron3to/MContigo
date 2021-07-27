@@ -1,12 +1,14 @@
-import Link from 'next/link';
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
+import Link from 'next/link';
+
 import LogoMs from '../../../public/logo.svg';
 
 export function Logo() {
   return (
     <>
       <Link href="/">
-        <a href="">
+        <a href="#">
           <Image
             src={LogoMs}
             alt="Logo of MejorConSalud"

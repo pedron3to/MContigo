@@ -1,4 +1,6 @@
 /* import { Biography } from '../../components/Biography'; */
+import { NextSeo } from 'next-seo';
+
 import { Categories } from '../../components/Categories';
 /* import { Content } from '../../components/Content'; */
 import { Image } from '../../components/Image';
@@ -6,7 +8,6 @@ import { PublicationDate } from '../../components/PublicationDate';
 /* import { Tags } from '../../components/Tags'; */
 import { Title } from '../../components/Title';
 import { PostProps } from '../../lib/wordpressApi/interface';
-import { NextSeo } from 'next-seo';
 
 export default function Post({ data }: any) {
   const {
@@ -50,7 +51,7 @@ export default function Post({ data }: any) {
       {tags.map(({ name }: any) => (
         <div>{name}</div>
       ))}
-     {/*  <Tags />
+      {/*  <Tags />
       <Biography /> */}
     </div>
   );

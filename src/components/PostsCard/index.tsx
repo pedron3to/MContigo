@@ -1,16 +1,27 @@
-import { PostProps } from "../../lib/wordpressApi/interface";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export type PostCardProps = Pick<PostProps, "id" | "title" |"excerpt" | "featured_media">
- 
-export default function PostsCard({featured_media,id,excerpt, title }: PostCardProps) {
+import { PostProps } from '../../lib/wordpressApi/interface';
+
+export type PostCardProps = Pick<
+  PostProps,
+  'id' | 'title' | 'excerpt' | 'featured_media'
+>;
+
+export default function PostsCard({
+  featured_media,
+  id,
+  excerpt,
+  title,
+}: PostCardProps) {
   return (
-    <motion.article key={id} className="bg-gray-100 rounded-md h-96 shadow-md" whileHover={{
-      scale: 1.02,
-      transition: { duration: .2 },
-    }}
-        
+    <motion.article
+      key={id}
+      className="bg-gray-100 rounded-md h-96 shadow-md"
+      whileHover={{
+        scale: 1.02,
+        transition: { duration: 0.2 },
+      }}
     >
       <Link href={`/posts/${id}`}>
         <div className="cursor-pointer">
@@ -25,9 +36,7 @@ export default function PostsCard({featured_media,id,excerpt, title }: PostCardP
         <Link href={`/posts/${id}`}>
           <div className="cursor-pointer">
             <h1 className="text-lg font-bold text-title">
-              {title.length >= 30
-                ? `${title.substring(0, 25)}...`
-                : title}
+              {title.length >= 30 ? `${title.substring(0, 25)}...` : title}
             </h1>
           </div>
         </Link>
