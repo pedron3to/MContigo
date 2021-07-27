@@ -30,7 +30,6 @@
     ],
     "class-methods-use-this": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-spreading": "on",
     "react/prop-types": "off",
     "react/require-default-props": "off",
     "react/func-name": "off",
