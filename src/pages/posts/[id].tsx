@@ -1,5 +1,4 @@
 /* eslint-disable react/no-danger */
-/* import { Biography } from '../../components/Biography'; */
 import { NextSeo } from 'next-seo';
 
 import { Categories } from '../../components/Categories';
@@ -61,8 +60,6 @@ export async function getServerSideProps({ query }: any) {
     `https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts/${id}`,
   );
   const data = await res.json();
-
-  console.log(data.tags);
 
   return {
     props: { data },

@@ -11,7 +11,6 @@ export function Search() {
   function handleOnSubmitSearch(e: any) {
     e.preventDefault();
 
-    setInput('');
     router.push(`/search/${input}`);
   }
   return (
