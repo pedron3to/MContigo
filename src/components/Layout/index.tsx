@@ -12,10 +12,10 @@ interface LayoutProps {
 }
 
 export function Layout({ children }: LayoutProps) {
-  const scrollX = useMotionValue(0);
+  const scrollY = useMotionValue(0);
   const handleScroll = (e: any) => {
     console.log(e);
-    scrollX.set(e.nativeEvent.target.scrollLeft);
+    scrollY.set(e.nativeEvent.target.scrollLeft);
   };
 
   return (

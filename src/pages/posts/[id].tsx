@@ -15,7 +15,6 @@ export default function Post({ data }: any) {
     featured_media,
     content,
     metas,
-    tags,
   }: PostProps = data;
 
   const dateFormatted = new Intl.DateTimeFormat('en-ES').format(
