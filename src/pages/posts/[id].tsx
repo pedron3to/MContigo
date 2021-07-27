@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* import { Biography } from '../../components/Biography'; */
 import { NextSeo } from 'next-seo';
 
@@ -49,7 +50,6 @@ export default function Post({ data }: any) {
       {tags.map(({ name }: any) => (
         <div>{name}</div>
       ))}
-     
     </div>
   );
 }
