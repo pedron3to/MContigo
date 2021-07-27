@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
@@ -26,6 +27,7 @@ export default function Home({ posts }: any) {
 
   return (
     <>
+      <NextSeo title="Mejor Con Salud" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
         {data.map(({ id, title, excerpt, featured_media }: any) => (
           <PostsCard
