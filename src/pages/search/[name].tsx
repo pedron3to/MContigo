@@ -1,7 +1,7 @@
 import axios from 'axios';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import Link from 'next/Link';
+import Link from 'next/link';
 import useSWR from 'swr';
 import { useState, Suspense } from 'react';
 

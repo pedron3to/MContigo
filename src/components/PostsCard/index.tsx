@@ -1,6 +1,6 @@
 import { PostProps } from "../../lib/wordpressApi/interface";
 import {motion} from 'framer-motion';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 export type PostCardProps = Pick<PostProps, "id" | "title" |"excerpt" | "featured_media">
  
