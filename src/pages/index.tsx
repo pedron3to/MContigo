@@ -21,9 +21,18 @@ export default function Home({ posts }: any) {
     initialData: posts,
   });
 
+  const { data: data1 } = useSWR(
+    `${url}?per_page=9&page=${pageIndex + 1}`,
+    fetcher,
+    {
+      initialData: posts,
+    },
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageIndex]);
+
   return (
     <>
       <NextSeo title="Mejor Con Salud" />
@@ -38,6 +47,18 @@ export default function Home({ posts }: any) {
           />
         ))}
       </div>
+      <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
+        {data1.map(({ id, title, excerpt, featured_media }: any) => (
+          <PostsCard
+            key={id}
+            featured_media={featured_media}
+            id={id}
+            title={title}
+            excerpt={excerpt}
+          />
+        ))}
+      </div>
+
       <div className="w-full flex justify-between items-center max-w-screen-lg mx-auto p-4">
         <Button onClick={() => setPageIndex(pageIndex - 1)}>Anterior</Button>
         <Button onClick={() => setPageIndex(pageIndex + 1)}>Siguiente</Button>

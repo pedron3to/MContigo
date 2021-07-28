@@ -1,4 +1,3 @@
-import { useMotionValue } from 'framer-motion';
 import { DefaultSeo } from 'next-seo';
 import { ReactNode } from 'react';
 
@@ -12,14 +11,8 @@ interface LayoutProps {
 }
 
 export function Layout({ children }: LayoutProps) {
-  const scrollY = useMotionValue(0);
-  const handleScroll = (e: any) => {
-    console.log(e);
-    scrollY.set(e.nativeEvent.target.scrollLeft);
-  };
-
   return (
-    <div onScroll={handleScroll}>
+    <>
       <DefaultSeo
         openGraph={{
           type: 'website',
@@ -39,6 +32,6 @@ export function Layout({ children }: LayoutProps) {
       </div>
       <Main>{children}</Main>
       <Footer />
-    </div>
+    </>
   );
 }
