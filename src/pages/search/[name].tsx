@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -7,6 +8,7 @@ import useSWR from 'swr';
 
 import { Button } from '../../components/Button';
 import { PostCardProps } from '../../components/PostsCard';
+import SearchAlert from '../../components/SearchAlert';
 
 const PostsCard = dynamic<PostCardProps>(
   () => import('../../components/PostsCard'),
@@ -48,6 +50,19 @@ export default function Search({ posts }: any) {
       initialData: posts,
     },
   );
+
+  const { data: dataNext } = useSWR(
+    orderByRelevance
+      ? `${url}?search=${router.query.name}&page=${pageIndex + 1}&per_page=9`
+      : `${url}?search=${router.query.name}&page=${
+          pageIndex + 1
+        }&per_page=9&orderby=relevance`,
+    fetcher,
+    {
+      initialData: posts,
+    },
+  );
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageIndex]);
@@ -55,9 +70,7 @@ export default function Search({ posts }: any) {
   return (
     <>
       {data.length === 0 ? (
-        <div className="w-full h-screen flex justify-center items-center max-w-screen-lg mx-auto px-4 text-title font-bold text-center md:text-2xl">
-          ¡No hay artículos relacionados con el término de búsqueda!
-        </div>
+        <SearchAlert />
       ) : (
         <>
           <div className="w-full flex justify-center items-center max-w-screen-lg mx-auto pt-1 md:p-2">
@@ -76,6 +89,17 @@ export default function Search({ posts }: any) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
             {data.map(({ id, title, excerpt, featured_media }: any) => (
+              <PostsCard
+                key={id}
+                id={id}
+                title={title}
+                excerpt={excerpt}
+                featured_media={featured_media}
+              />
+            ))}
+          </div>
+          <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
+            {dataNext.map(({ id, title, excerpt, featured_media }: any) => (
               <PostsCard
                 key={id}
                 id={id}

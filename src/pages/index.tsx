@@ -6,12 +6,14 @@ import useSWR from 'swr';
 
 import { Button } from '../components/Button';
 import { PostCardProps } from '../components/PostsCard';
+import { PostProps } from '../lib/wordpressApi/interface';
 
 const PostsCard = dynamic<PostCardProps>(
   () => import('../components/PostsCard'),
 );
 
-const fetcher = (url: any) => axios.get(url).then((res: any) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res: any) => res.data);
+
 export const url = 'https://api.beta.mejorconsalud.com/wp-json/mc/v1/posts';
 
 export default function Home({ posts }: any) {
@@ -21,7 +23,7 @@ export default function Home({ posts }: any) {
     initialData: posts,
   });
 
-  const { data: data1 } = useSWR(
+  const { data: nextData } = useSWR(
     `${url}?per_page=9&page=${pageIndex + 1}`,
     fetcher,
     {
@@ -37,7 +39,7 @@ export default function Home({ posts }: any) {
     <>
       <NextSeo title="Mejor Con Salud" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
-        {data.map(({ id, title, excerpt, featured_media }: any) => (
+        {data.map(({ id, title, excerpt, featured_media }: PostProps) => (
           <PostsCard
             key={id}
             featured_media={featured_media}
@@ -48,7 +50,7 @@ export default function Home({ posts }: any) {
         ))}
       </div>
       <div className="hidden grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full px-4 max-w-screen-lg mx-auto my-8">
-        {data1.map(({ id, title, excerpt, featured_media }: any) => (
+        {nextData.map(({ id, title, excerpt, featured_media }: PostProps) => (
           <PostsCard
             key={id}
             featured_media={featured_media}

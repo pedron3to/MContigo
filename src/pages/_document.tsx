@@ -14,7 +14,6 @@ class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/favicon.png" />
           <link rel="stylesheet" type="text/css" href="/nprogress.css" />
-          <title>Mejor Con Salud</title>
         </Head>
         <body>
           <Main />
